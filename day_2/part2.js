@@ -1,6 +1,6 @@
 const fs = require('fs'); const readLine = require('readline');
 
-function returnIDorZero(line) {
+function cubesMultiplied(line) {
     let splitValues = line.split(' ');
     let colorMaxes = {'red': 0, 'green': 0, 'blue': 0};
 
@@ -18,7 +18,7 @@ async function readLines() {
 
     let sum = 0;
     for await (let line of readingLine) {
-        sum += returnIDorZero(line);
+        sum += cubesMultiplied(line);
     }
     console.log(sum);
 }
