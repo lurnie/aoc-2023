@@ -7,12 +7,12 @@ function findNumbers(line, start, condition, change) {
 }
 async function readLines() {
     const dataStream = fs.createReadStream('input.txt');
-    const readingLine = readLine.createInterface({input: dataStream})
+    const readingLine = readLine.createInterface({input: dataStream});
 
     let sum = 0;
     for await (let line of readingLine) {
         let first = findNumbers(line, 0, (i) => {return i < line.length}, 1);
-        let last = findNumbers(line, line.length - 1, (i) => {return i >= 0}, -1)
+        let last = findNumbers(line, line.length - 1, (i) => {return i >= 0;}, -1);
         let calibrationValue = Number(`${first}${last}`);
         sum += calibrationValue;
     }
