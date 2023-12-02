@@ -1,7 +1,7 @@
 const fs = require('fs'); const readLine = require('readline');
 const colorMaxes = {'red': 12, 'green': 13, 'blue': 14};
 
-function returnIDorZero(line) {
+function returnCubesMultiplied(line) {
     let splitValues = line.split(' ');
     let id = splitValues[1];
     id = Number(id.substring(0, id.length - 1));
