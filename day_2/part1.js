@@ -19,7 +19,7 @@ async function readLines() {
 
     let sum = 0;
     for await (let line of readingLine) {
-        sum += returnIDorZero(line);
+        sum += returnCubesMultiplied(line);
     }
     console.log(sum);
 }
