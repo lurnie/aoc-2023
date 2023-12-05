@@ -3,7 +3,7 @@ let digits = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'n
 
 function findNumbers(line, start, condition, change) {
     for (let i = start; condition(i); i += change) {
-        if (!isNaN(Number(line[i]))) {return line[i];} else {
+        if (!isNaN(line[i])) {return line[i];} else {
             let pastDigits = '';
             for (let i2 = i; i - i2 < 5; i2--) {
                 // looks 5 characters "back" into the line to see if there's a written digit
